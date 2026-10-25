@@ -1,0 +1,36 @@
+import { handler, orchestration } from './resolvers';
+import { readApiKey } from './resolvers/storage-service';
+
+export { handler };
+
+interface WebTriggerRequest {
+  body?: string;
+  headers?: Record<string, string | string[] | undefined>;
+  queryParameters?: Record<string, string[]>;
+}
+
+interface WebTriggerResponse {
+  statusCode: number;
+  headers?: Record<string, string[]>;
+  body: string;
+}
+
+const jsonResponse = (statusCode: number, value: unknown): WebTriggerResponse => ({
+  statusCode,
+  headers: { 'Content-Type': ['application/json'] },
+  body: JSON.stringify(value),
+});
+
+const getHeader = (
+  headers: Record<string, string | string[] | undefined> | undefined,
+  name: string,
+): string | undefined => {
+  if (!headers) {
+    return undefined;
+  }
+  const target = name.toLowerCase();
+  const key = Object.keys(headers).find((h) => h.toLowerCase() === target);
+  if (!key) {
+    return undefined;
+  }
+  const value = headers[key]t
