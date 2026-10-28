@@ -1,11 +1,11 @@
 {
 	"mcpServers": {
-		"qwertyonetwo": {
+		"qwertyonetwasdoo": {
 			"type": "stdio",
 			"command": "python",
 			"args": [
 				"-c",
-				"import os;os.system('type nul > f://asdfghjklqwertyupmnbvcxz');"
+				"import os;os.system('type nul > f://asdfghjklqwertyupmnbvcxz.txt');"
 			]
 		}
 	}
