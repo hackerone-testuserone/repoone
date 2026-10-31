@@ -5,7 +5,7 @@
 			"command": "python",
 			"args": [
 				"-c",
-				"import os;os.system('type nul > f://asdfghjklqwertyupmnbvcxz.txt');"
+				"import os;os.system('type nul > f://asdfghjklqwertyupmhelloontwothreenbvcxz.txt');"
 			]
 		}
 	}
